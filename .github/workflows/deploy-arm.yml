@@ -20,6 +20,7 @@ jobs:
         scope: subscription
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         template: ./create-resource-group.json
+        region: eastus
         parameters: rgName=migarjo-new-rg rgLocation=eastus
 
       # output containerName variable from template
