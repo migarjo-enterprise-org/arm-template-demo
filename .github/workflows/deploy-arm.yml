@@ -19,9 +19,9 @@ jobs:
       with:
         scope: subscription
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
-        template: ./create-resource-group.json
+        template: ./azuredeploy.json
         region: eastus
-        parameters: rgName=migarjo-new-rg rgLocation=eastus
+        parameters: storagePrefix=mj rgName=migarjo-new-rg2 rgLocation=eastus
 
       # output containerName variable from template
     - run: echo ${{ steps.deploy.outputs.containerName }}
