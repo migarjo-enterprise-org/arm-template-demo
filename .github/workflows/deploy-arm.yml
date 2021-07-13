@@ -18,7 +18,6 @@ jobs:
       uses: azure/arm-deploy@v1
       with:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
-        resourceGroupName: ${{ secrets.AZURE_RG }}
         template: ./create-resource-group.json
         parameters: rgName=migarjo-new-rg rgLocation=eastus
 
